@@ -172,25 +172,3 @@ class Sukoku:
                 # This effectively causes backtracking - higher for-loops continue if no solution found
                 if solution is not None:
                     return solution
-
-
-TEST = [
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [1, 0, 4, 0, 0, 6, 0, 0, 0],
-    [0, 0, 3, 1, 4, 9, 7, 0, 0],
-    [0, 0, 7, 8, 0, 0, 1, 0, 2],
-    [2, 0, 0, 0, 0, 1, 0, 9, 0],
-    [0, 0, 1, 5, 0, 0, 4, 0, 6],
-    [0, 0, 2, 4, 1, 8, 9, 0, 0],
-    [8, 0, 5, 0, 0, 2, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-]
-
-if __name__ == "__main__":
-    puz = Sukoku(TEST)
-    solution = puz.solve()
-    print("Solution")
-    print("---")
-    for r in solution:
-        print(r)
-    print("---")

@@ -14,10 +14,17 @@ Includes scraper and parser for dailykillersudoku.com, puzzles [here](https://ww
 
 ```bash
 pip install pulp
+pip install numpy
+```
+
+## Run tests 
+
+```bash
+pytest .
 ```
 
 ## Run code
 
 ```bash
-python3 killerClient.py
+python3 killer_client.py
 ```
