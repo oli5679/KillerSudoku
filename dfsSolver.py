@@ -167,11 +167,11 @@ class Sukoku:
             for val in guess_vals:
                 self.board = deepcopy(prev_board)
                 self.board[guess_i][guess_j] = val
-                ans = self.solve()
+                solution = self.solve()
                 # Return if you find a solution (i.e. doesn't return None)
                 # This effectively causes backtracking - higher for-loops continue if no solution found
-                if ans is not None:
-                    return ans
+                if solution is not None:
+                    return solution
 
 
 TEST = [
