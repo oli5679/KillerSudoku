@@ -30,15 +30,13 @@ if __name__ == "__main__":
 
     killer = client.get_killer_sudoku(19664)
 
-    print('Pulling Sudoku')
+    print("Pulling Sudoku")
 
     killer_solver = KillerSudokuSolver(cage_constraints=killer.cages)
-    
-    print('Solving Sudoku')
+
+    print("Solving Sudoku")
     solution = killer_solver.solve()
 
-    print('Solution found')
+    print("Solution found")
     for row in solution:
         print(row)
-
-
