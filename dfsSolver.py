@@ -133,10 +133,18 @@ class Sukoku:
 
     def solve(self):
         """
-        Solves sudoku by recursively calling this
+        Solves sudoku - recursive
+
+        Logic:
+            (a) updates valid cells
+            (b) stop & return None if contradiction
+            (c) stop & return solution if puzzle finished
+            (d) find guess candidate - unknown value with fewest possibilities
+            (e) try all possible guesses, calling 'solve' on each guessed board
+            (f) if one of the possible guesses returns valid solution, return solution
 
         Returns:
-            ans (list):
+            solution (list):
                 list of answers to Sudoku
         """
         # Update candidate cells, contradiction_flag and board
@@ -150,11 +158,6 @@ class Sukoku:
 
         # If completed, return solution
         if completion_flag and not contradiction_flag:
-            print("Solution")
-            print("---")
-            for r in self.board:
-                print(r)
-            print("---")
             return self.board
 
         # Guess one of the uncompleted cells
@@ -184,5 +187,10 @@ TEST = [
 ]
 
 if __name__ == "__main__":
-    puz = Sukoku(test)
-    puz.solve()
+    puz = Sukoku(TEST)
+    solution = puz.solve()
+    print("Solution")
+    print("---")
+    for r in solution:
+        print(r)
+    print("---")
