@@ -1,5 +1,5 @@
 from killerSudoku import KillerSudoku
-from killerSolver import KillerSudokuSolver
+from pulpSover import KillerSudokuSolver
 import requests
 import re
 
