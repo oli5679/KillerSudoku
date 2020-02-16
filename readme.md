@@ -26,5 +26,5 @@ pytest .
 ## Run code
 
 ```bash
-python3 killer_client.py
+python3 killer_sudoku/killer_client.py
 ```
